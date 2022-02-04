@@ -1,8 +1,6 @@
 import { Pool } from "pg";
 
-const connectionString =
-  "postgresql://dbuser:secretpassword@database.server.com:3211/mydb";
-
+const connectionString = process.env.DB_URL;
 const db = new Pool({ connectionString });
 
 export default db;
